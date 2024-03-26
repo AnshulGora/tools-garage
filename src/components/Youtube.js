@@ -35,7 +35,7 @@ const Youtube = () => {
   };
 
   return (
-    <div className="container-fluid ytcomp">
+    <div id="yt-thumbnail-downloader" className="container-fluid ytcomp">
       <div className="text-center">
         <h5 className="card-head my-2">Youtube Thumbnail Downloader</h5>
 

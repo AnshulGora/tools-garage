@@ -35,7 +35,7 @@ const TextExtractor = () => {
   };
 
   return (
-    <div className="container-fluid textextcomp">
+    <div id="image-text-extractor" className="container-fluid textextcomp">
       <div className="text-center">
         <h5 className="card-head my-2">Image Text Extractor</h5>
 
@@ -49,7 +49,6 @@ const TextExtractor = () => {
       <h5>Upload Image:</h5>
       <input
         type="file"
-        className="form-control"
         onChange={handleImageChange}
         accept="image/*"
         className="form-control mb-4"

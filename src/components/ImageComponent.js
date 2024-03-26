@@ -35,7 +35,7 @@ const ImageCompressor = () => {
 
   return (
     <>
-      <div className="container-fluid img-comp">
+      <div id="image-compressor" className="container-fluid img-comp">
         <div className="text-center">
           <h5 className="card-head my-2">Image Compressor</h5>
 

@@ -54,7 +54,7 @@ export default function Textutil() {
 
   return (
     <>
-      <div className="container-fluid textutilcomp">
+      <div id="text-util" className="container-fluid textutilcomp">
         <div className="text-center">
           <h5 className="card-head my-2">TextUtility Tools</h5>
 
