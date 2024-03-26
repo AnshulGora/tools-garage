@@ -28,7 +28,7 @@ const PasswordGenerator = () => {
   };
 
   return (
-    <div className="container-fluid passcomp">
+    <div id="password-generator" className="container-fluid passcomp">
       <div className="text-center">
         <h5 className="card-head my-2">Password Generator</h5>
 

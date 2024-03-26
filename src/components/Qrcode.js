@@ -30,7 +30,7 @@ function Qrcode() {
   };
 
   return (
-    <div className="container-fluid qrcode">
+    <div id="QR-generator" className="container-fluid qrcode">
       <div className="text-center qrcodehead">
         <h5 className="card-head my-2">QR Code Generator</h5>
 

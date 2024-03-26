@@ -24,7 +24,7 @@ function App() {
       <TextExtractor />
       <PasswordGenerator />
       <Youtube />
-      {/* <ImageConverter /> */}
+      <ImageConverter />
       <URLShortener />
       <PdfCompressor />
       <Footer />

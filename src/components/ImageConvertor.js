@@ -9,7 +9,7 @@ const ImageConverter = () => {
   };
 
   const handleClick = () => {
-    document.getElementById("fileInput").click();
+    document.getElementById("imageInput").click();
   };
 
   const convertToJPG = (file) => {
@@ -48,7 +48,7 @@ const ImageConverter = () => {
   };
 
   return (
-    <div className="container-fluid imageconvertorcomp">
+    <div id="image-converter" className="container-fluid imageconvertorcomp">
       <div className="text-center">
         <h5 className="card-head my-2">Image Converter</h5>
 
@@ -60,7 +60,7 @@ const ImageConverter = () => {
 
       <div className="input-group mb-3">
         <input
-          id="fileInput"
+          id="imageInput"
           type="file"
           accept="image/*"
           onChange={handleInputChange}
@@ -71,7 +71,7 @@ const ImageConverter = () => {
         </button>
       </div>
 
-      <div className="drop-area">
+      <div className="image-drop-area">
         <h3>Drop here or click above to select an image</h3>
         {imageSrc && (
           <img

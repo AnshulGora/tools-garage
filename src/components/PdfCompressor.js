@@ -65,7 +65,7 @@ const PdfCompressor = () => {
   };
 
   return (
-    <div className="container-fluid pdfcomp">
+    <div id="pdf-compressor" className="container-fluid pdfcomp">
       <div className="text-center">
         <h5 className="card-head my-2">PDF Compressor</h5>
 

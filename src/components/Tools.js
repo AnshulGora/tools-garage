@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-scroll";
 export default function Tools() {
   return (
     <div className="container-fluid toolsdiv">
@@ -15,9 +15,13 @@ export default function Tools() {
                 This tool allows you to compress the image and reduce the size
                 as per your requirements.
               </p>
-              <a href="www.google.com" className="btn btn-primary">
+              <Link
+                to="image-compressor"
+                href="www.google.com"
+                className="btn btn-primary"
+              >
                 Explore Tool
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -31,9 +35,13 @@ export default function Tools() {
                 This tool allows you to create a QR code for your website or any
                 text you want to encode.
               </p>
-              <a href="www.google.com" className="btn btn-primary">
+              <Link
+                to="QR-generator"
+                href="www.google.com"
+                className="btn btn-primary"
+              >
                 Explore Tool
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -47,9 +55,13 @@ export default function Tools() {
                 This tool allows you to extract text from images and copy it to
                 your clipboard. Copy the text and use it anywhere.
               </p>
-              <a href="www.google.com" className="btn btn-primary">
+              <Link
+                to="image-text-extractor"
+                href="www.google.com"
+                className="btn btn-primary"
+              >
                 Explore Tool
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -63,9 +75,13 @@ export default function Tools() {
                 This tool allows you to convert your text to Uppercase,
                 Lowercase, Capitalize and also copy the text.
               </p>
-              <a href="www.google.com" className="btn btn-primary">
+              <Link
+                to="text-util"
+                href="www.google.com"
+                className="btn btn-primary"
+              >
                 Explore Tool
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -79,9 +95,13 @@ export default function Tools() {
                 This tool allows you to generate strong passwords with custom
                 length and include symbols and numbers.
               </p>
-              <a href="www.google.com" className="btn btn-primary">
+              <Link
+                to="password-generator"
+                href="www.google.com"
+                className="btn btn-primary"
+              >
                 Explore Tool
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -95,9 +115,13 @@ export default function Tools() {
                 This tool allows you to shorten your long URLs and share them
                 easily with others. Allows to Copy the URL.
               </p>
-              <a href="www.google.com" className="btn btn-primary">
+              <Link
+                to="url-shortner"
+                href="www.google.com"
+                className="btn btn-primary"
+              >
                 Explore Tool
-              </a>
+              </Link>
             </div>
           </div>
         </div>

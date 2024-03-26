@@ -1,13 +1,13 @@
 import React from "react";
-
+import { Link } from "react-scroll";
 export default function Navbar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg shadow-sm">
         <div className="container-fluid">
-          <a className="navbar-brand" href="www.google.com">
+          <Link className="navbar-brand" to="/">
             ToolsGarage
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -30,52 +30,51 @@ export default function Navbar() {
                 >
                   Tools Availabe
                 </a>
-                <ul className="dropdown-menu">
+                <ul className="dropdown-menu" role="button">
                   <li>
-                    <a className="dropdown-item" href="www.google.com">
+                    <Link className="dropdown-item" to="image-compressor">
                       Image Compressor
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="www.google.com">
+                    <Link className="dropdown-item" to="QR-generator">
                       QR Code Generator
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="www.google.com">
+                    <Link className="dropdown-item" to="image-text-extractor">
                       Image Text Extractor
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="www.google.com">
+                    <Link className="dropdown-item" to="password-generator">
                       Password Genarator
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="www.google.com">
+                    <Link
+                      className="dropdown-item"
+                      to="yt-thumbnail-downloader"
+                    >
                       Yt Thumbnail Downloader
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="www.google.com">
+                    <Link className="dropdown-item" to="url-shortner">
                       URL Shortner
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="www.google.com">
+                    <Link className="dropdown-item" to="pdf-compressor">
                       PDF Compressor
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <a
-                  className="nav-link"
-                  aria-current="page"
-                  href="www.google.com"
-                >
+                <Link className="nav-link" aria-current="page" to="/">
                   Home
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
