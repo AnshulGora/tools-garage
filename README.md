@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# ToolsGarage
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to ToolsGarage, your one-stop destination for a collection of handy web tools! :hammer_and_wrench:
 
-## Available Scripts
+ToolsGarage is a web application built using ReactJS and Bootstrap for the UI. It offers a variety of tools designed to simplify common tasks, including QR code generation, password generation, PDF compression, image compression, and more. With an intuitive interface and a growing list of tools, ToolsGarage aims to enhance your productivity and streamline your workflow.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **QR Code Generator:** Easily generate QR codes for URLs, text, or contact information.
+- **Password Generator:** Create strong and secure passwords with customizable options.
+- **PDF Compressor:** Reduce PDF file size without compromising quality.
+- **Image Compressor:** Optimize image files for web usage by reducing file size.
+- **[Add more tools here]**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To run ToolsGarage locally on your machine, follow these steps:
 
-### `npm test`
+1. Clone the repository:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   git clone https://github.com/your-username/toolsGarage.git
+   ```
 
-### `npm run build`
+2. Navigate to the project directory:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   cd toolsGarage
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Install dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+4. Start the development server:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. Open your browser and visit `http://localhost:3000` to view the application.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contributing
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+We welcome contributions from the community to enhance and expand the functionality of ToolsGarage. If you have an idea for a new tool or would like to improve an existing one, please refer to our [Contributing Guidelines](CONTRIBUTING.md) for more information on how to get involved.
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ToolsGarage is open source and available under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code as permitted by the license.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contact
 
-### Code Splitting
+If you have any questions or suggestions, feel free to reach out to us:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- ianshulgora@gmail.com
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you for using ToolsGarage! We hope you find it useful. :rocket:
