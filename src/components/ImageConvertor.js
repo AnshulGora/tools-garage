@@ -41,7 +41,7 @@ const ImageConverter = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = imageSrc;
-    link.download = "converted.jpg";
+    link.download = "Converted_Image.jpg";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -58,17 +58,16 @@ const ImageConverter = () => {
         </h5>
       </div>
 
+      <br />
+      <h5>Upload Image:</h5>
       <div className="input-group mb-3">
         <input
           id="imageInput"
           type="file"
           accept="image/*"
           onChange={handleInputChange}
-          style={{ display: "none" }}
+          className="form-control"
         />
-        <button className="download-btn" type="button" onClick={handleClick}>
-          Choose Image
-        </button>
       </div>
 
       <div className="image-drop-area">
@@ -77,15 +76,18 @@ const ImageConverter = () => {
           <img
             src={imageSrc}
             alt="Converted to JPG"
-            className="image-preview"
+            className="image-preview img-fluid rounded"
           />
         )}
       </div>
 
       {imageSrc && (
-        <button onClick={handleDownload} className="download-button">
-          Download Converted Image
-        </button>
+        <>
+          <br />
+          <button onClick={handleDownload} className="download-btn">
+            Download Converted Image
+          </button>
+        </>
       )}
     </div>
   );

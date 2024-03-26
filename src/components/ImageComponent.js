@@ -46,6 +46,7 @@ const ImageCompressor = () => {
           </h5>
         </div>
 
+        <h5>Upload Image:</h5>
         <input
           type="file"
           onChange={handleImageChange}

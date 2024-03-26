@@ -42,7 +42,7 @@ function Qrcode() {
       </div>
       <div className="row">
         <div className="col-md-8 divone">
-          <h5>Enter the information to be encoded. </h5>
+          <h5>Enter the information to be encoded - </h5>
           <textarea
             required
             className="form-control"
