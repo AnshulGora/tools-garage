@@ -24,7 +24,6 @@ export default function Navbar() {
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
-                  role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
@@ -72,7 +71,7 @@ export default function Navbar() {
                 </ul>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to="/">
+                <Link className="nav-link" to="/">
                   Home
                 </Link>
               </li>

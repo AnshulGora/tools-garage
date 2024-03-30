@@ -2,7 +2,10 @@ import React from "react";
 
 export default function Tagline() {
   return (
-    <div className="container-fluid taglinediv">
+    <div className="container-fluid taglinediv ">
+      <div className="position-relative">
+        <div className="bgeffect position-absolute top-50 start-50 translate-middle"></div>
+      </div>
       <h1 className="taglineh1 text-center">
         Simplify Your Workflow:
         <br /> Effortless Online Tools at Your Fingertips

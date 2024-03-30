@@ -1,29 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-:root {
-  /* Colors */
-  --color-white: #fffdf9;
+/* :root {
+  --color-background: #fffdf9;
   --color-text: #201515;
-  --color-cyan: #E9F6FF;
+  --color-tools: #E9F6FF;
   --color-theme: #ff4f00;
   --color-gray: #EFECEC;
+} */
+
+:root {
+  --color-background: black;
+  --color-text: #F6F5F5;
+  --color-tools: #E9F6FF;
+  --color-theme: #0099ff;
+  --color-gray: #0a0a0a;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   color: #33333b;
 }
 
 /* Navbar CSS File */
 
 .navbar {
-  background-color: var(--color-white);
+  background-color: var(--color-background);
   padding: 1% 5%;
 }
 
 .navbar-brand {
-  color: var(--color-theme);
+  
   font-weight: 600;
+
+  background: linear-gradient(90deg, rgba(46,161,255,1) 0%, rgba(88,225,252,1) 50%, rgba(63,153,255,1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* Hide the original text color */
 }
 
 .nav-link {
@@ -31,10 +43,15 @@ body {
   font-weight: 500;
 }
 
+.nav-link:hover {
+  color: var(--color-theme);
+  font-weight: 500;
+}
+
 /* Tagline File CSS */
 
 .taglinediv {
-  background-color: var(--color-white);
+  background-color: var(--color-background);
   padding: 7% 5%;
   color: var(--color-text);
 
@@ -42,6 +59,7 @@ body {
 }
 
 .taglineh1 {
+  z-index: 99;
   font-size: 3rem;
   font-weight: 600;
 }
@@ -55,7 +73,7 @@ body {
 .taglinebtn1 {
   margin: 0% 1%;
   background-color: var(--color-theme);
-  color: var(--color-white);
+  color: var(--color-background);
   border-radius: 25px;
   padding: 1% 1.8%;
   text-decoration: none;
@@ -63,7 +81,7 @@ body {
 
 .taglinebtn2 {
   margin: 0% 1%;
-  background-color: var(--color-white);
+  background-color: var(--color-background);
   color:var(--color-text);
   border: 1px solid var(--color-text);
   border-radius: 25px;
@@ -96,11 +114,19 @@ body {
   font-size: 0.9rem;
 }
 
+.bgeffect {
+  height: 180px;
+  width: 180px;
+  background-color: #0099ff;
+  border-radius: 50%;
+  filter: blur(180px);
+}
+
 /* Tools Div CSS */
 
 
 .toolsdiv {
-  background-color: var(--color-cyan);
+  background-color: var(--color-gray);
   padding: 6% 6%;
   color: var(--color-text);
 }
@@ -128,14 +154,18 @@ body {
 }
 
 .card {
+  color: var(--color-text);
+  background-color: var(--color-background);
   border: none;
   margin: 2% 0%;
+
+  border: 1px solid var(--color-theme);
 }
 
 .img-comp {
   padding: 6% 6%;
 
-  background-color: var(--color-white);
+  background-color: var(--color-background);
   color: var(--color-text);
 }
 
@@ -147,19 +177,19 @@ body {
 .btn {
   padding: 1% 2%;
   background-color: var(--color-theme);
-  color: var(--color-white);
+  color: var(--color-text);
   border: none;
 }
 
 .btn:hover {
   color: var(--color-theme);
-  background-color: var(--color-white);
+  background-color: var(--color-text);
 }
 
 .download-btn {
   border: none;
   background-color: var(--color-theme);
-  color: var(--color-white);
+  color: var(--color-text);
   font-weight: 500;
   padding: 1% 2%;
   text-decoration: none;
@@ -169,7 +199,7 @@ body {
 .download-btn:hover {
   border: 1px solid var(--color-theme);
   color: var(--color-theme);
-  background-color: var(--color-white);
+  background-color: var(--color-background);
 }
 
 .textutilbtns button {
@@ -202,21 +232,21 @@ textarea, input {
 .footer {
   padding: 4% 6%;
   background-color: #191919;
-  color: var(--color-white);
+  color: var(--color-text);
 }
 
 /* Textutil file CSS */
 
 .textutilcomp {
   padding: 6% 6%;
-  background-color: var(--color-white);
+  background-color: var(--color-background);
   color: var(--color-text);  
 }
 
 /* Text Extractor CSS */
 
 .textextcomp {
-  padding: 4% 6%;
+  padding: 6% 6%;
 
   background-color: var(--color-gray);
   color: var(--color-text);
@@ -227,7 +257,7 @@ textarea, input {
 .passcomp {
   padding: 6% 6%;
 
-  background-color: var(--color-white);
+  background-color: var(--color-background);
   color: var(--color-text);
 }
 
@@ -244,7 +274,7 @@ textarea, input {
 .imageconvertorcomp {
   padding: 6% 6%;
 
-  background-color: var(--color-white);
+  background-color: var(--color-background);
   color: var(--color-text);
 }
 
@@ -262,6 +292,6 @@ textarea, input {
 .pdfcomp {
   padding: 6% 6%;
 
-  background-color: var(--color-white);
+  background-color: var(--color-background);
   color: var(--color-text);
 }
