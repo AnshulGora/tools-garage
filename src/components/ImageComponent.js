@@ -33,6 +33,11 @@ const ImageCompressor = () => {
     setMaxSizeMB(maxSize);
   };
 
+  const downloadHandler = () => {
+    setOriginalImage(null);
+    setCompressedImage(null);
+    document.getElementById("img-input").value = "";
+  };
   return (
     <>
       <div id="image-compressor" className="container-fluid img-comp">
@@ -49,6 +54,7 @@ const ImageCompressor = () => {
         <h5>Upload Image:</h5>
         <input
           type="file"
+          id="img-input"
           onChange={handleImageChange}
           className="form-control mb-3"
         />
@@ -93,6 +99,7 @@ const ImageCompressor = () => {
                     href={compressedImage}
                     download="compressed_krdiya.jpg"
                     className="download-btn"
+                    onClick={downloadHandler}
                   >
                     Download Image
                   </a>
