@@ -21,6 +21,30 @@ body {
   color: #33333b;
 }
 
+/* Scrollbar  */
+
+/* Define scrollbar track */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+/* Define scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-theme); /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Rounded corners of the scrollbar thumb */
+}
+
+/* Define scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: var(--color-gray); /* Color of the scrollbar track */
+}
+
+/* Define scrollbar thumb when hovering over it */
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-text); /* Color of the scrollbar thumb on hover */
+}
+
+
 /* Navbar CSS File */
 
 .navbar {
@@ -52,7 +76,7 @@ body {
 
 .taglinediv {
   background-color: var(--color-background);
-  padding: 7% 5%;
+  padding: 8% 5%;
   color: var(--color-text);
 
   padding-bottom: 4%;
@@ -142,7 +166,7 @@ body {
 }
 
 .toolsdiv h1 {
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 600;
 }
 
@@ -160,6 +184,8 @@ body {
   margin: 2% 0%;
 
   border: 1px solid var(--color-theme);
+
+  padding: 0.9% 1%;
 }
 
 .img-comp {
@@ -187,17 +213,16 @@ body {
 }
 
 .download-btn {
-  border: none;
+  border: 1px solid var(--color-theme);
   background-color: var(--color-theme);
   color: var(--color-text);
   font-weight: 500;
-  padding: 1% 2%;
+  padding: 0.9% 1.8%;
   text-decoration: none;
   border-radius: 25px;
 }
 
 .download-btn:hover {
-  border: 1px solid var(--color-theme);
   color: var(--color-theme);
   background-color: var(--color-background);
 }
@@ -230,7 +255,7 @@ textarea, input {
 }
 
 .footer {
-  padding: 4% 6%;
+  padding: 5% 6%;
   background-color: #191919;
   color: var(--color-text);
 }
