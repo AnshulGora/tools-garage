@@ -14,8 +14,6 @@ ToolsGarage is a web application built using ReactJS and Bootstrap for the UI. I
 
 ## Getting Started
 
-## Testing OpenSource Contribution
-
 To run ToolsGarage locally on your machine, follow these steps:
 
 1. Clone the repository:

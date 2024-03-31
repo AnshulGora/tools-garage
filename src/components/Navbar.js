@@ -68,6 +68,16 @@ export default function Navbar() {
                       PDF Compressor
                     </Link>
                   </li>
+                  <li>
+                    <Link className="dropdown-item" to="image-converter">
+                      Image Converter
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="text-util">
+                      Text Utility
+                    </Link>
+                  </li>
                 </ul>
               </li>
               <li className="nav-item">
