@@ -12,24 +12,31 @@ import ImageConverter from "./components/ImageConvertor";
 import URLShortener from "./components/URLShortener";
 import PdfCompressor from "./components/PdfCompressor";
 import Contributers from "./components/Contributers";
-
+import Home from "./components/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
       <Tagline />
-      <Tools />
-      <ImageComponent />
-      <Qrcode />
-      <Textutil />
-      <TextExtractor />
-      <PasswordGenerator />
-      <Youtube />
-      <ImageConverter />
-      <URLShortener />
-      <PdfCompressor />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contributers" element={<Contributers />} />
+
+        {/* to be added later */}
+        {/* <Route path="" element={<Tools />} />
+        <Route path="" element={<ImageComponent />} />
+        <Route path="" element={<Qrcode />} />
+        <Route path="" element={<Textutil />} />
+        <Route path="" element={<TextExtractor />} />
+        <Route path="" element={<PasswordGenerator />} />
+        <Route path="" element={<Youtube />} />
+        <Route path="" element={<ImageConverter />} />
+        <Route path="" element={<URLShortener />} />
+        <Route path="" element={<PdfCompressor />} /> */}
+      </Routes>
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
 
