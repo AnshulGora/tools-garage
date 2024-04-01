@@ -23,23 +23,20 @@ body {
 
 /* Scrollbar  */
 
-/* Define scrollbar track */
+
 ::-webkit-scrollbar {
-  width: 8px; /* Width of the scrollbar */
+  width: 8px; /* Width*/
 }
 
-/* Define scrollbar thumb */
 ::-webkit-scrollbar-thumb {
   background-color: var(--color-theme); /* Color of the scrollbar thumb */
   border-radius: 4px; /* Rounded corners of the scrollbar thumb */
 }
 
-/* Define scrollbar track */
 ::-webkit-scrollbar-track {
   background-color: var(--color-gray); /* Color of the scrollbar track */
 }
 
-/* Define scrollbar thumb when hovering over it */
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--color-text); /* Color of the scrollbar thumb on hover */
 }
@@ -59,7 +56,7 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   cursor: pointer;
-  color: transparent !important; /* Hide the original text color */
+  color: transparent; 
 }
 
 .nav-link, .dropdown-item {
@@ -72,15 +69,17 @@ body {
   color: var(--color-theme);
   font-weight: 500;
 }
+
 .dropdown-menu{
-  color: var(--color-text)!important;
-  background-color: var(--color-background) !important;
+  color: var(--color-text);
+  background-color: var(--color-background);
   border: none;
   margin: 2% 0%;
   border: 1px solid var(--color-theme);
 }
+
 .nav-link.show{
-  color: var(--color-theme)!important;
+  color: var(--color-theme);
 }
 
 /* Tagline File CSS */
@@ -155,6 +154,14 @@ body {
   background-color: #0099ff;
   border-radius: 50%;
   filter: blur(180px);
+
+  animation: blurAnimation 5s ease-in-out infinite;
+}
+
+@keyframes blurAnimation {
+  0% { filter: blur(180px); }
+  50% { filter: blur(150px); }
+  100% { filter: blur(190px); }
 }
 
 /* Tools Div CSS */
