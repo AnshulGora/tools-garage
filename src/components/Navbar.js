@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
+import { Link as RouteLink } from "react-router-dom";
 export default function Navbar() {
   return (
     <div>
@@ -21,6 +22,11 @@ export default function Navbar() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
+              <li className="nav-item">
+                <RouteLink className="nav-link" to="/">
+                  Home
+                </RouteLink>
+              </li>
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
@@ -80,10 +86,11 @@ export default function Navbar() {
                   </li>
                 </ul>
               </li>
+
               <li className="nav-item">
-                <Link className="nav-link" to="/">
-                  Home
-                </Link>
+                <RouteLink className="nav-link" to="/contributers">
+                  Contributers
+                </RouteLink>
               </li>
             </ul>
           </div>
