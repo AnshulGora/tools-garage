@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 export default function Navbar() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg shadow-sm">
+      <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             ToolsGarage

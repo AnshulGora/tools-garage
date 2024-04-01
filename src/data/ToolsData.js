@@ -52,8 +52,8 @@ const ToolsData = [
   {
     id: "9",
     title: "Youtube Thumbnail Downloader",
-    desc: "this tool allows you to download the thumbnail of youtube short and videos",
-    link: "thumbnail-downloader",
+    desc: "This tool allows you to download the thumbnail of youtube Videos.",
+    link: "yt-thumbnail-downloader",
   },
 ];
 
