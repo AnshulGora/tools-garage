@@ -11,6 +11,7 @@ import Youtube from "./components/Youtube";
 import ImageConverter from "./components/ImageConvertor";
 import URLShortener from "./components/URLShortener";
 import PdfCompressor from "./components/PdfCompressor";
+import Contributers from "./components/Contributers";
 
 function App() {
   return (

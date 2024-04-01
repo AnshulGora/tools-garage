@@ -338,3 +338,24 @@ textarea, input {
   background-color: var(--color-background);
   color: var(--color-text);
 }
+
+/* Contributers Component */
+
+.contributerscomp {
+  padding: 6% 6%;
+
+  background-color: var(--color-gray);
+  color: var(--color-text);
+}
+
+.contributer-card {
+  padding: 1% 2%;
+  border: none;
+  margin: 2% 1%;
+
+  background-color: var(--color-gray);
+}
+
+.contributer-img {
+  border: 6px solid var(--color-theme);
+}
