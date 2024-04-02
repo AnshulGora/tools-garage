@@ -13,10 +13,10 @@ import URLShortener from "./components/URLShortener";
 import PdfCompressor from "./components/PdfCompressor";
 import Contributers from "./components/Contributers";
 import Home from "./components/Home";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <Navbar />
       <Tagline />
       <Routes>
@@ -36,7 +36,7 @@ function App() {
         <Route path="" element={<PdfCompressor />} /> */}
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </>
   );
 }
 
