@@ -5,7 +5,7 @@ export default function Contributers() {
     <div className="container-fluid contributerscomp">
       <div className="text-center shine-parent  ">
         <h5 className="card-head-contributer my-2 btn-shine">✦ Contributers</h5>
-        <h5 className="mb-4 mt-5">
+        <h5 className="mb-4">
           This project is open-source and contributions are welcome. <br />
           The contributors are listed below:
         </h5>

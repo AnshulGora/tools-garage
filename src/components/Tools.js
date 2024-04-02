@@ -4,7 +4,7 @@ import ToolsData from "../data/ToolsData";
 export default function Tools() {
   return (
     <div className="container-fluid toolsdiv shine-parent">
-      <h1 className="text-center btn-shine pb-5">✦ Tools Available</h1>
+      <h1 className="text-center btn-shine">✦ Tools Available</h1>
 
       <div className="row toolsrow">
         {ToolsData.map((tool) => {

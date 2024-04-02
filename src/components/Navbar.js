@@ -94,7 +94,7 @@ export default function Navbar() {
                 </RouteLink>
               </li>
 
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <a
                   href="https://github.com/AnshulGora/tools-garage"
                   target="_blank"
@@ -102,7 +102,7 @@ export default function Navbar() {
                 >
                   <i class="fa-brands fa-github"></i>
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

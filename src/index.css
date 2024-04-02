@@ -393,7 +393,7 @@ textarea, input {
   border: 1px solid var(--color-theme);
 }
 
-/* sliding animation */
+/* sliding animation
 .shine-parent{
   position: relative;
   border: 2px solid transparent;
@@ -401,22 +401,20 @@ textarea, input {
 
 .btn-shine {
   transform: translate(-50%, -50%);
-position: absolute;
-left: 50%;
-  /* padding: 12px 48px; */
-  color: #fff;
-  background: linear-gradient(to right, #4d4d4d 0, #fff 10%, #4d4d4d 20%);
+  position: absolute;
+  left: 50%;
+  color: #191919;
+  background: linear-gradient(to right, var(--color-text) 0, #191919 0%, var(--color-text)5%);
   background-position: 0;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shine 3s infinite linear;
   animation-fill-mode: forwards;
   -webkit-text-size-adjust: none;
-  /* font-weight: 600; */
-  /* font-size: 16px; */
   text-decoration: none;
   white-space: nowrap;
 }
+
 @-moz-keyframes shine {
   0% {
     background-position: 0;
@@ -460,4 +458,4 @@ left: 50%;
   100% {
     background-position: 270px;
   }
-}
+} */

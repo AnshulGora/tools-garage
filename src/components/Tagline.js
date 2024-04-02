@@ -16,12 +16,16 @@ export default function Tagline() {
       </h4>
 
       <div className="text-center taglinebtns">
-        <a href="www.google.com" target="blank" className="taglinebtn1">
-          Start with Free Email
+        <a
+          href="https://github.com/AnshulGora/tools-garage"
+          target="blank"
+          className="taglinebtn1"
+        >
+          <i class="fa-brands fa-github"></i> Visit Repository
         </a>
 
         <a href="www.google.com" target="blank" className="taglinebtn2">
-          Start with Gmail
+          Login with Gmail
         </a>
       </div>
 
