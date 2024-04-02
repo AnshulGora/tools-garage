@@ -6,9 +6,9 @@ export default function Navbar() {
     <div>
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
+          <RouteLink className="navbar-brand" to="/">
             ToolsGarage
-          </Link>
+          </RouteLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -28,13 +28,14 @@ export default function Navbar() {
                 </RouteLink>
               </li>
               <li className="nav-item dropdown">
-                <a
+                <RouteLink
+                  to="\"
                   className="nav-link dropdown-toggle"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Tools
-                </a>
+                </RouteLink>
                 <ul className="dropdown-menu" role="button">
                   <li>
                     <Link className="dropdown-item" to="image-compressor">
