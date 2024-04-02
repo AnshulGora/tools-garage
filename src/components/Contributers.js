@@ -3,9 +3,9 @@ import React from "react";
 export default function Contributers() {
   return (
     <div className="container-fluid contributerscomp">
-      <div className="text-center">
-        <h5 className="card-head-contributer my-2">✦ Contributers</h5>
-        <h5 className="mb-4">
+      <div className="text-center shine-parent  ">
+        <h5 className="card-head-contributer my-2 btn-shine">✦ Contributers</h5>
+        <h5 className="mb-4 mt-5">
           This project is open-source and contributions are welcome. <br />
           The contributors are listed below:
         </h5>
@@ -22,7 +22,6 @@ export default function Contributers() {
             <div className="card-body">
               <h4>Aryan Mishra</h4>
               <p className="card-text">Frontend Developer</p>
-
               <a
                 href="https://www.linkedin.com/in/aryan-mishra-062a5a200/"
                 className="fw-bold px-3 py-2 download-btn link-btn"

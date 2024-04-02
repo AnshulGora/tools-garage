@@ -20,9 +20,8 @@ function App() {
       <Navbar />
       <Tagline />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route path="/contributers" element={<Contributers />} />
-
         {/* to be added later */}
         {/* <Route path="" element={<Tools />} />
         <Route path="" element={<ImageComponent />} />
