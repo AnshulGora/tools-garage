@@ -30,7 +30,6 @@ export default function Contributers() {
               >
                 LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i>
               </a>
-              {/* https://github.com/aryan-mishra1404 */}
             </div>
           </div>
         </div>
@@ -55,27 +54,6 @@ export default function Contributers() {
             </div>
           </div>
         </div>
-
-        {/* <div className="col-sm-3">
-          <div className="contributer-card card text-center">
-            <img
-              src="https://cdn.jsdelivr.net/gh/alohe/memojis/png/memo_29.png"
-              alt="Avatar"
-              className="card-img-top rounded-circle contributer-img m-auto "
-            />
-            <div className="card-body">
-              <h4>Contributer New</h4>
-              <p className="card-text">Domain Experienced</p>
-              <button
-                href="https://www.linkedin.com/in/domain-name"
-                target="_blank"
-                className="fw-bold px-3 py-2 download-btn"
-              >
-                LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </button>
-            </div>
-          </div>
-        </div> */}
       </div>
     </div>
   );
