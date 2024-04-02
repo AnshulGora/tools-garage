@@ -156,7 +156,7 @@ body {
   border-radius: 50%;
   filter: blur(180px);
 
-  animation: blurAnimation 5s ease-in-out infinite;
+  animation: blurAnimation 4s ease-in-out infinite;
 }
 
 @keyframes blurAnimation {
@@ -363,9 +363,22 @@ textarea, input {
   width: 90%;
   /* background-color: #ffdcb9; */
   background-color: var(--color-background);
+  animation: floating-avatar 2s infinite ease-in-out;
 }
 
 .card-head-contributer {
   font-size: 2.4rem;
   font-weight: 600;
+}
+
+@keyframes floating-avatar {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

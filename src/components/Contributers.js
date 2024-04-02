@@ -23,13 +23,13 @@ export default function Contributers() {
               <h4>Aryan Mishra</h4>
               <p className="card-text">Frontend Developer</p>
 
-              <button
+              <a
                 href="https://www.linkedin.com/in/aryan-mishra-062a5a200/"
-                className="fw-bold px-3 py-2 download-btn"
+                className="fw-bold px-3 py-2 download-btn link-btn"
                 target="_blank"
               >
                 LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </button>
+              </a>
               {/* https://github.com/aryan-mishra1404 */}
             </div>
           </div>
@@ -45,13 +45,13 @@ export default function Contributers() {
             <div className="card-body">
               <h4>Anshul Gora</h4>
               <p className="card-text">Frontend Developer</p>
-              <button
+              <a
                 href="https://www.linkedin.com/in/anshul-gora"
                 target="_blank"
-                className="fw-bold px-3 py-2 download-btn"
+                className="fw-bold px-3 py-2 download-btn link-btn"
               >
                 LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </button>
+              </a>
             </div>
           </div>
         </div>

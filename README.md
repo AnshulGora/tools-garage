@@ -4,13 +4,18 @@ Welcome to ToolsGarage, your one-stop destination for a collection of handy web 
 
 ToolsGarage is a web application built using ReactJS and Bootstrap for the UI. It offers a variety of tools designed to simplify common tasks, including QR code generation, password generation, PDF compression, image compression, and more. With an intuitive interface and a growing list of tools, ToolsGarage aims to enhance your productivity and streamline your workflow.
 
-## Features
+## Tools
 
-- **QR Code Generator:** Easily generate QR codes for URLs, text, or contact information.
-- **Password Generator:** Create strong and secure passwords with customizable options.
-- **PDF Compressor:** Reduce PDF file size without compromising quality.
-- **Image Compressor:** Optimize image files for web usage by reducing file size.
+- **QR Code Generator:** Generate QR codes for various data types.
+- **Password Generator:** Create secure, customizable passwords.
+- **PDF Compressor:** Reduce PDF file size maintaining quality.
+- **Image Compressor:** Optimize images for web by reducing size.
+- **Image Converter:** Convert images between different formats.
+- **URL Shortner:** Shorten long URLs for easy sharing.
+- **Youtube Thumbnail Downloader:** Download thumbnails from Youtube video links.
 - **[Add more tools here]**
+
+We are constantly working to add more tools to this list. Stay tuned for updates!
 
 ## Getting Started
 

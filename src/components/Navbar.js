@@ -33,7 +33,7 @@ export default function Navbar() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Tools Availabe
+                  Tools
                 </a>
                 <ul className="dropdown-menu" role="button">
                   <li>
@@ -91,6 +91,16 @@ export default function Navbar() {
                 <RouteLink className="nav-link" to="/contributers">
                   Contributers
                 </RouteLink>
+              </li>
+
+              <li className="nav-item">
+                <a
+                  href="https://github.com/AnshulGora/tools-garage"
+                  target="_blank"
+                  className="nav-link"
+                >
+                  <i class="fa-brands fa-github"></i>
+                </a>
               </li>
             </ul>
           </div>
