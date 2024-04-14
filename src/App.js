@@ -14,6 +14,7 @@ import PdfCompressor from "./components/PdfCompressor";
 import Contributers from "./components/Contributers";
 import Home from "./components/Home";
 import { Routes, Route } from "react-router-dom";
+import Signup from "./components/Signup";
 function App() {
   return (
     <>
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/contributers" element={<Contributers />} />
+        <Route path="/signup" element={<Signup />} />
         {/* to be added later */}
         {/* <Route path="" element={<Tools />} />
         <Route path="" element={<ImageComponent />} />

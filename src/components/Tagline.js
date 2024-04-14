@@ -1,4 +1,5 @@
 import React from "react";
+import { Link as RouteLink } from "react-router-dom";
 
 export default function Tagline() {
   return (
@@ -24,9 +25,9 @@ export default function Tagline() {
           <i class="fa-brands fa-github"></i> Visit Repository
         </a>
 
-        <a href="www.google.com" target="blank" className="taglinebtn2">
-          Login with Gmail
-        </a>
+        <RouteLink to="/signup" className="taglinebtn2">
+          Login with Gmail{" "}
+        </RouteLink>
       </div>
 
       <p className="text-center checkpoints">

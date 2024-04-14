@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from "react-scroll";
-import { Link as RouteLink } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
+import { Link as RouteLink, useLocation } from "react-router-dom";
+
 export default function Navbar() {
   return (
     <div>
@@ -38,52 +39,85 @@ export default function Navbar() {
                 </RouteLink>
                 <ul className="dropdown-menu" role="button">
                   <li>
-                    <Link className="dropdown-item" to="image-compressor">
+                    <ScrollLink
+                      smooth="true"
+                      className="dropdown-item"
+                      to="image-compressor"
+                    >
                       Image Compressor
-                    </Link>
+                    </ScrollLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="QR-generator">
+                    <ScrollLink
+                      smooth="true"
+                      className="dropdown-item"
+                      to="QR-generator"
+                    >
                       QR Code Generator
-                    </Link>
+                    </ScrollLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="image-text-extractor">
+                    <ScrollLink
+                      smooth="true"
+                      className="dropdown-item"
+                      to="image-text-extractor"
+                    >
                       Image Text Extractor
-                    </Link>
+                    </ScrollLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="password-generator">
+                    <ScrollLink
+                      smooth="true"
+                      className="dropdown-item"
+                      to="password-generator"
+                    >
                       Password Genarator
-                    </Link>
+                    </ScrollLink>
                   </li>
                   <li>
-                    <Link
+                    <ScrollLink
+                      smooth="true"
                       className="dropdown-item"
                       to="yt-thumbnail-downloader"
                     >
                       Yt Thumbnail Downloader
-                    </Link>
+                    </ScrollLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="url-shortner">
+                    <ScrollLink
+                      smooth="true"
+                      className="dropdown-item"
+                      to="url-shortner"
+                    >
                       URL Shortner
-                    </Link>
+                    </ScrollLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="pdf-compressor">
+                    <ScrollLink
+                      smooth="true"
+                      className="dropdown-item"
+                      to="pdf-compressor"
+                    >
                       PDF Compressor
-                    </Link>
+                    </ScrollLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="image-converter">
+                    <ScrollLink
+                      smooth="true"
+                      className="dropdown-item"
+                      to="image-converter"
+                    >
                       Image Converter
-                    </Link>
+                    </ScrollLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="text-util">
+                    <ScrollLink
+                      smooth="true"
+                      className="dropdown-item"
+                      to="text-util"
+                    >
                       Text Utility
-                    </Link>
+                    </ScrollLink>
                   </li>
                 </ul>
               </li>
@@ -91,6 +125,12 @@ export default function Navbar() {
               <li className="nav-item">
                 <RouteLink className="nav-link" to="/contributers">
                   Contributers
+                </RouteLink>
+              </li>
+
+              <li className="nav-item">
+                <RouteLink className="nav-link" to="/signup">
+                  <i class="fa-solid fa-user-astronaut"></i>
                 </RouteLink>
               </li>
 
