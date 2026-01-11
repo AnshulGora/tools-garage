@@ -1,5 +1,4 @@
 import React from "react";
-import { Link as ScrollLink } from "react-scroll";
 import { Link as RouteLink, useLocation } from "react-router-dom";
 
 export default function Navbar() {
@@ -39,85 +38,85 @@ export default function Navbar() {
                 </RouteLink>
                 <ul className="dropdown-menu" role="button">
                   <li>
-                    <ScrollLink
+                    <RouteLink
                       smooth="true"
                       className="dropdown-item"
-                      to="image-compressor"
+                      to="image-tools"
                     >
                       Image Compressor
-                    </ScrollLink>
+                    </RouteLink>
                   </li>
                   <li>
-                    <ScrollLink
+                    <RouteLink
                       smooth="true"
                       className="dropdown-item"
                       to="QR-generator"
                     >
                       QR Code Generator
-                    </ScrollLink>
+                    </RouteLink>
                   </li>
                   <li>
-                    <ScrollLink
+                    <RouteLink
                       smooth="true"
                       className="dropdown-item"
-                      to="image-text-extractor"
+                      to="text-extractor"
                     >
                       Image Text Extractor
-                    </ScrollLink>
+                    </RouteLink>
                   </li>
                   <li>
-                    <ScrollLink
+                    <RouteLink
                       smooth="true"
                       className="dropdown-item"
                       to="password-generator"
                     >
                       Password Genarator
-                    </ScrollLink>
+                    </RouteLink>
                   </li>
                   <li>
-                    <ScrollLink
+                    <RouteLink
                       smooth="true"
                       className="dropdown-item"
-                      to="yt-thumbnail-downloader"
+                      to="youtube-tools"
                     >
                       Yt Thumbnail Downloader
-                    </ScrollLink>
+                    </RouteLink>
                   </li>
                   <li>
-                    <ScrollLink
+                    <RouteLink
                       smooth="true"
                       className="dropdown-item"
-                      to="url-shortner"
+                      to="url-shortener"
                     >
                       URL Shortner
-                    </ScrollLink>
+                    </RouteLink>
                   </li>
                   <li>
-                    <ScrollLink
+                    <RouteLink
                       smooth="true"
                       className="dropdown-item"
                       to="pdf-compressor"
                     >
                       PDF Compressor
-                    </ScrollLink>
+                    </RouteLink>
                   </li>
                   <li>
-                    <ScrollLink
+                    <RouteLink
                       smooth="true"
                       className="dropdown-item"
                       to="image-converter"
                     >
                       Image Converter
-                    </ScrollLink>
+                    </RouteLink>
                   </li>
                   <li>
-                    <ScrollLink
+                    <RouteLink
                       smooth="true"
                       className="dropdown-item"
-                      to="text-util"
+                      to="text-utils"
                     >
                       Text Utility
-                    </ScrollLink>
+                    </RouteLink>
                   </li>
                 </ul>
               </li>

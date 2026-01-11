@@ -5,25 +5,25 @@ const ToolsData = [
     id: "1",
     title: "Image Compressor",
     desc: "This tool allows you to compress the image and reduce the size as per your requirements.",
-    link: "image-compressor",
+    link: "image-tools",
   },
   {
     id: "2",
     title: "QR Code Generator",
     desc: "This tool allows you to create a QR code for your website or any text you want to encode.",
-    link: "QR-generator",
+    link: "qr-generator",
   },
   {
     id: "3",
     title: "Image Text Extractor",
     desc: "This tool allows you to extract text from images and copy it to your clipboard. Copy the text and use it anywhere.",
-    link: "image-text-extractor",
+    link: "text-extractor",
   },
   {
     id: "4",
     title: "TextUtility Tools",
     desc: "This tool allows you to convert your text to Uppercase,Lowercase, Capitalize and also copy the text.",
-    link: "text-util",
+    link: "text-utils",
   },
   {
     id: "5",
@@ -35,7 +35,7 @@ const ToolsData = [
     id: "6",
     title: "URL Shortner",
     desc: "This tool allows you to shorten your long URLs and share them easily with others. Allows to Copy the URL.",
-    link: "url-shortner",
+    link: "url-shortener",
   },
   {
     id: "7",
@@ -51,9 +51,9 @@ const ToolsData = [
   },
   {
     id: "9",
-    title: "Youtube Thumbnail Downloader",
+    title: "Yt Thumbnail Downloader",
     desc: "This tool allows you to download the thumbnail of youtube Videos.",
-    link: "yt-thumbnail-downloader",
+    link: "youtube-tools",
   },
 ];
 

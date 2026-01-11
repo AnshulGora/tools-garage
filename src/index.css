@@ -1,20 +1,10 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
-
-/* :root {
-  --color-background: #fffdf9;
-  --color-text: #201515;
-  --color-tools: #E9F6FF;
-  --color-theme: #ff4f00;
-  --color-gray: #EFECEC;
-} */
-
 :root {
   --color-background: black;
-  --color-text: #F6F5F5;
-  --color-tools: #E9F6FF;
+  --color-text: #f6f5f5;
+  --color-tools: #e9f6ff;
   --color-theme: #0099ff;
   --color-gray: #0a0a0a;
-  --color-button: #65B741;
+  --color-button: #65b741;
 }
 
 body {
@@ -23,7 +13,6 @@ body {
 }
 
 /* Scrollbar  */
-
 
 ::-webkit-scrollbar {
   width: 8px; /* Width*/
@@ -39,9 +28,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--color-text); /* Color of the scrollbar thumb on hover */
+  background-color: var(
+    --color-text
+  ); /* Color of the scrollbar thumb on hover */
 }
-
 
 /* Navbar CSS File */
 
@@ -51,27 +41,34 @@ body {
 }
 
 .navbar-brand {
-  
   font-weight: 600;
-  background: linear-gradient(90deg, rgba(46,161,255,1) 0%, rgba(88,225,252,1) 50%, rgba(63,153,255,1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(46, 161, 255, 1) 0%,
+    rgba(88, 225, 252, 1) 50%,
+    rgba(63, 153, 255, 1) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   cursor: pointer;
-  color: transparent!important; 
+  color: transparent !important;
 }
 
-.nav-link, .dropdown-item {
+.nav-link,
+.dropdown-item {
   color: var(--color-text);
   font-weight: 500;
   cursor: pointer;
 }
 
-.nav-link:hover,.dropdown-item:hover,.nav-link:focus {
-  color: var(--color-theme)!important;
+.nav-link:hover,
+.dropdown-item:hover,
+.nav-link:focus {
+  color: var(--color-theme) !important;
   font-weight: 500;
 }
 
-.dropdown-menu{
+.dropdown-menu {
   color: var(--color-text);
   background-color: var(--color-background);
   border: none;
@@ -79,8 +76,8 @@ body {
   border: 1px solid var(--color-theme);
 }
 
-.nav-link.show{
-  color: var(--color-theme)!important;
+.nav-link.show {
+  color: var(--color-theme) !important;
 }
 
 /* Tagline File CSS */
@@ -117,7 +114,7 @@ body {
 .taglinebtn2 {
   margin: 0% 1%;
   background-color: var(--color-background);
-  color:var(--color-text);
+  color: var(--color-text);
   border: 1px solid var(--color-text);
   border-radius: 25px;
   padding: 1% 1.8%;
@@ -160,13 +157,18 @@ body {
 }
 
 @keyframes blurAnimation {
-  0% { filter: blur(180px); }
-  50% { filter: blur(150px); }
-  100% { filter: blur(190px); }
+  0% {
+    filter: blur(180px);
+  }
+  50% {
+    filter: blur(150px);
+  }
+  100% {
+    filter: blur(190px);
+  }
 }
 
 /* Tools Div CSS */
-
 
 .toolsdiv {
   background-color: var(--color-gray);
@@ -181,7 +183,7 @@ body {
 }
 
 .row {
-  margin-top: 2%
+  margin-top: 2%;
 }
 
 .toolsdiv h1 {
@@ -190,7 +192,6 @@ body {
 }
 
 /* Tools div -> Card */
-
 
 .card-title {
   font-size: 1.3rem;
@@ -265,7 +266,8 @@ body {
   padding-bottom: 2%;
 }
 
-textarea, input {
+textarea,
+input {
   width: 70%;
 }
 
@@ -284,7 +286,7 @@ textarea, input {
 .textutilcomp {
   padding: 6% 6%;
   background-color: var(--color-background);
-  color: var(--color-text);  
+  color: var(--color-text);
 }
 
 /* Text Extractor CSS */
@@ -334,7 +336,7 @@ textarea, input {
 /* PDF Compressor Component */
 
 .pdfcomp {
-  padding: 6% 6%;
+  padding: 6% 10%;
 
   background-color: var(--color-background);
   color: var(--color-text);
@@ -394,17 +396,16 @@ textarea, input {
 
 /* Signup Component CSS */
 
-.signup-comp{
+.signup-comp {
   padding: 4% 6%;
   background-color: var(--color-gray);
   color: var(--color-text);
 }
 
-.signup-card{
+.signup-card {
   margin-top: 2%;
   padding: 2% 0%;
   background-color: var(--color-gray);
   color: var(--color-text);
   /* border: 1px solid var(--color-text); */
 }
-
