@@ -73,16 +73,18 @@ const PasswordGenerator = () => {
           Include Numbers
         </label>
       </div>
-      <button className="download-btn me-2" onClick={generatePassword}>
-        Generate Password
-      </button>
-      <button
-        className="download-btn"
-        onClick={handleCopyPassword}
-        disabled={!password}
-      >
-        Copy Password
-      </button>
+      <div className="tool-actions">
+        <button className="download-btn" onClick={generatePassword}>
+          Generate Password
+        </button>
+        <button
+          className="download-btn"
+          onClick={handleCopyPassword}
+          disabled={!password}
+        >
+          Copy Password
+        </button>
+      </div>
       <div className="mt-3">
         <label htmlFor="passwordOutput" className="form-label">
           <h5>Generated Password:</h5>

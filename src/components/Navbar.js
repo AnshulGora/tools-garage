@@ -1,5 +1,5 @@
 import React from "react";
-import { Link as RouteLink, useLocation } from "react-router-dom";
+import { Link as RouteLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -29,7 +29,7 @@ export default function Navbar() {
               </li>
               <li className="nav-item dropdown">
                 <RouteLink
-                  to="\"
+                  to="/"
                   className="nav-link dropdown-toggle"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -41,7 +41,7 @@ export default function Navbar() {
                     <RouteLink
                       smooth="true"
                       className="dropdown-item"
-                      to="image-tools"
+                      to="/image-tools"
                     >
                       Image Compressor
                     </RouteLink>
@@ -50,7 +50,7 @@ export default function Navbar() {
                     <RouteLink
                       smooth="true"
                       className="dropdown-item"
-                      to="QR-generator"
+                      to="/qr-generator"
                     >
                       QR Code Generator
                     </RouteLink>
@@ -59,16 +59,7 @@ export default function Navbar() {
                     <RouteLink
                       smooth="true"
                       className="dropdown-item"
-                      to="text-extractor"
-                    >
-                      Image Text Extractor
-                    </RouteLink>
-                  </li>
-                  <li>
-                    <RouteLink
-                      smooth="true"
-                      className="dropdown-item"
-                      to="password-generator"
+                      to="/password-generator"
                     >
                       Password Genarator
                     </RouteLink>
@@ -77,16 +68,7 @@ export default function Navbar() {
                     <RouteLink
                       smooth="true"
                       className="dropdown-item"
-                      to="youtube-tools"
-                    >
-                      Yt Thumbnail Downloader
-                    </RouteLink>
-                  </li>
-                  <li>
-                    <RouteLink
-                      smooth="true"
-                      className="dropdown-item"
-                      to="url-shortener"
+                      to="/url-shortener"
                     >
                       URL Shortner
                     </RouteLink>
@@ -95,7 +77,7 @@ export default function Navbar() {
                     <RouteLink
                       smooth="true"
                       className="dropdown-item"
-                      to="pdf-compressor"
+                      to="/pdf-compressor"
                     >
                       PDF Compressor
                     </RouteLink>
@@ -104,32 +86,36 @@ export default function Navbar() {
                     <RouteLink
                       smooth="true"
                       className="dropdown-item"
-                      to="image-converter"
+                      to="/image-converter"
                     >
                       Image Converter
                     </RouteLink>
                   </li>
                   <li>
+                    <RouteLink className="dropdown-item" to="/world-clock">
+                      World Clock
+                    </RouteLink>
+                  </li>
+                  <li>
                     <RouteLink
-                      smooth="true"
                       className="dropdown-item"
-                      to="text-utils"
+                      to="/currency-converter"
                     >
-                      Text Utility
+                      Currency Converter
                     </RouteLink>
                   </li>
                 </ul>
               </li>
 
               <li className="nav-item">
-                <RouteLink className="nav-link" to="/contributers">
-                  Contributers
+                <RouteLink className="nav-link" to="/contributors">
+                  Contributors
                 </RouteLink>
               </li>
 
               <li className="nav-item">
                 <RouteLink className="nav-link" to="/signup">
-                  <i class="fa-solid fa-user-astronaut"></i>
+                  <i className="fa-solid fa-user-astronaut" />
                 </RouteLink>
               </li>
 

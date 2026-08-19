@@ -60,10 +60,6 @@ const PdfCompressor = () => {
     event.preventDefault();
   };
 
-  const handleSelectFileClick = () => {
-    document.getElementById("fileInput").click();
-  };
-
   return (
     <div id="pdf-compressor" className="container-fluid pdfcomp">
       <div className="text-center">
@@ -93,14 +89,14 @@ const PdfCompressor = () => {
         </span>
       </div>
 
-      <div>
+      <div className="tool-actions pdf-actions">
         <button
           onClick={compressPdf}
           disabled={!file || loading}
           className="download-btn"
         >
           {loading ? "Compressing..." : "Compress PDF"}
-        </button>{" "}
+        </button>
         {compressedPdfBlob && (
           <button onClick={downloadPdf} className="download-btn">
             Download PDF

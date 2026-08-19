@@ -25,9 +25,11 @@ export default function Contributers() {
               <a
                 href="https://www.linkedin.com/in/anshul-gora"
                 target="_blank"
+                rel="noreferrer"
                 className="fw-bold px-3 py-2 download-btn link-btn"
               >
-                LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                LinkedIn{" "}
+                <i className="fa-solid fa-arrow-up-right-from-square" />
               </a>
             </div>
           </div>
@@ -47,8 +49,10 @@ export default function Contributers() {
                 href="https://www.linkedin.com/in/aryan-mishra-062a5a200/"
                 className="fw-bold px-3 py-2 download-btn link-btn"
                 target="_blank"
+                rel="noreferrer"
               >
-                LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                LinkedIn{" "}
+                <i className="fa-solid fa-arrow-up-right-from-square" />
               </a>
             </div>
           </div>

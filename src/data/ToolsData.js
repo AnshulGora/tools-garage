@@ -1,5 +1,3 @@
-import Tools from "../components/Tools";
-
 const ToolsData = [
   {
     id: "1",
@@ -9,51 +7,45 @@ const ToolsData = [
   },
   {
     id: "2",
-    title: "QR Code Generator",
-    desc: "This tool allows you to create a QR code for your website or any text you want to encode.",
-    link: "qr-generator",
-  },
-  {
-    id: "3",
-    title: "Image Text Extractor",
-    desc: "This tool allows you to extract text from images and copy it to your clipboard. Copy the text and use it anywhere.",
-    link: "text-extractor",
-  },
-  {
-    id: "4",
-    title: "TextUtility Tools",
-    desc: "This tool allows you to convert your text to Uppercase,Lowercase, Capitalize and also copy the text.",
-    link: "text-utils",
-  },
-  {
-    id: "5",
-    title: "Password Generator",
-    desc: "This tool allows you to generate strong passwords with custom length and include symbols and numbers.",
-    link: "password-generator",
-  },
-  {
-    id: "6",
-    title: "URL Shortner",
-    desc: "This tool allows you to shorten your long URLs and share them easily with others. Allows to Copy the URL.",
-    link: "url-shortener",
-  },
-  {
-    id: "7",
     title: "Image Converter",
     desc: "This tool allows you to convert any type of Images to the jpg format.",
     link: "image-converter",
   },
   {
-    id: "8",
+    id: "3",
+    title: "QR Code Generator",
+    desc: "This tool allows you to create a QR code for your website or any text you want to encode.",
+    link: "qr-generator",
+  },
+  {
+    id: "4",
+    title: "Password Generator",
+    desc: "This tool allows you to generate strong passwords with custom length and include symbols and numbers.",
+    link: "password-generator",
+  },
+  {
+    id: "5",
+    title: "URL Shortner",
+    desc: "This tool allows you to shorten your long URLs and share them easily with others. Allows to Copy the URL.",
+    link: "url-shortener",
+  },
+  {
+    id: "6",
     title: "PDF Compressor",
     desc: "This tool allows you to compress and reduce the size of the pdf.",
     link: "pdf-compressor",
   },
   {
-    id: "9",
-    title: "Yt Thumbnail Downloader",
-    desc: "This tool allows you to download the thumbnail of youtube Videos.",
-    link: "youtube-tools",
+    id: "7",
+    title: "World Clock",
+    desc: "Track the current time across cities and time zones in real time.",
+    link: "world-clock",
+  },
+  {
+    id: "8",
+    title: "Currency Converter",
+    desc: "Convert currencies using the latest available exchange rates.",
+    link: "currency-converter",
   },
 ];
 

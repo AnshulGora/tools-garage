@@ -1,18 +1,35 @@
 import React, { useState } from "react";
 
+const imageFormats = {
+  jpg: { label: "JPG", mimeType: "image/jpeg", extension: "jpg" },
+  png: { label: "PNG", mimeType: "image/png", extension: "png" },
+  webp: { label: "WebP", mimeType: "image/webp", extension: "webp" },
+};
+
 const ImageConverter = () => {
   const [imageSrc, setImageSrc] = useState(null);
+  const [imageFile, setImageFile] = useState(null);
+  const [selectedFormat, setSelectedFormat] = useState("jpg");
 
   const handleInputChange = (e) => {
     const file = e.target.files[0];
-    convertToJPG(file);
+    if (!file) return;
+
+    setImageFile(file);
+    convertImage(file, selectedFormat);
   };
 
-  const handleClick = () => {
-    document.getElementById("imageInput").click();
+  const handleFormatChange = (e) => {
+    const format = e.target.value;
+    setSelectedFormat(format);
+
+    if (imageFile) {
+      convertImage(imageFile, format);
+    }
   };
 
-  const convertToJPG = (file) => {
+  const convertImage = (file, formatKey) => {
+    const format = imageFormats[formatKey];
     const reader = new FileReader();
     reader.onload = (event) => {
       const img = new Image();
@@ -24,13 +41,23 @@ const ImageConverter = () => {
         ctx.drawImage(img, 0, 0);
         canvas.toBlob(
           (blob) => {
-            const convertedFile = new File([blob], "converted.jpg", {
-              type: "image/jpeg",
+            if (!blob) return;
+
+            const convertedFile = new File(
+              [blob],
+              `converted.${format.extension}`,
+              { type: format.mimeType },
+            );
+            const nextImageSrc = URL.createObjectURL(convertedFile);
+            setImageSrc((previousImageSrc) => {
+              if (previousImageSrc) {
+                URL.revokeObjectURL(previousImageSrc);
+              }
+              return nextImageSrc;
             });
-            setImageSrc(URL.createObjectURL(convertedFile));
           },
-          "image/jpeg",
-          1
+          format.mimeType,
+          1,
         );
       };
       img.src = event.target.result;
@@ -41,7 +68,7 @@ const ImageConverter = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = imageSrc;
-    link.download = "Converted_Image.jpg";
+    link.download = `Converted_Image.${imageFormats[selectedFormat].extension}`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -53,7 +80,7 @@ const ImageConverter = () => {
         <h5 className="card-head my-2">Image Converter</h5>
 
         <h5 className="mb-4">
-          This tool converts any image file to JPG format. <br />
+          Convert any image file to JPG, PNG, or WebP format. <br />
           Click the button below to download the converted image.
         </h5>
       </div>
@@ -70,12 +97,30 @@ const ImageConverter = () => {
         />
       </div>
 
+      <div className="mb-3">
+        <label htmlFor="imageFormat" className="form-label fw-bold">
+          Output Format:
+        </label>
+        <select
+          id="imageFormat"
+          value={selectedFormat}
+          onChange={handleFormatChange}
+          className="form-select"
+        >
+          {Object.entries(imageFormats).map(([formatKey, format]) => (
+            <option key={formatKey} value={formatKey}>
+              {format.label}
+            </option>
+          ))}
+        </select>
+      </div>
+
       <div className="image-drop-area">
         <h3>Drop here or click above to select an image</h3>
         {imageSrc && (
           <img
             src={imageSrc}
-            alt="Converted to JPG"
+            alt={`Converted to ${imageFormats[selectedFormat].label}`}
             className="image-preview img-fluid rounded"
           />
         )}

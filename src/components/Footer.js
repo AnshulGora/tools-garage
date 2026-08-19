@@ -3,24 +3,28 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div className="container-fluid footer text-light py-5">
+    <footer className="container-fluid footer text-light">
       <div className="container">
-        <div className="row justify-content-between">
+        <div className="footer-grid">
           {/* Brand and Description */}
-          <div className="col-md-6 mb-4 mb-md-0">
-            <h3 className="fw-bold mb-3">✦ ToolsGarage</h3>
-            <p className="text-secondary" style={{ lineHeight: "1.8" }}>
+          <div className="footer-brand">
+            <h3 className="fw-bold">✦ ToolsGarage</h3>
+            <p>
               ToolsGarage is a free platform offering essential digital
               utilities. From image optimization to text processing, we build
               tools that make your daily workflow faster and more efficient.
             </p>
+            <span className="footer-tagline">Useful tools. Zero clutter.</span>
           </div>
 
           {/* Quick Links Section */}
-          <div className="col-md-5">
-            <h4 className="fw-bold mb-4">Quick Links</h4>
-            <div className="row">
-              <div className="col-6">
+          <div className="footer-links-section">
+            <div className="footer-section-heading">
+              <span>Explore</span>
+              <span className="footer-heading-line" />
+            </div>
+            <div className="footer-links-grid">
+              <div>
                 <ul className="list-unstyled footer-links">
                   <li>
                     <Link
@@ -40,32 +44,24 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      to="/text-utils"
-                      className="text-decoration-none text-secondary d-block mb-2"
-                    >
-                      Text Utilities
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
                       to="/image-converter"
                       className="text-decoration-none text-secondary d-block mb-2"
                     >
                       Image Converter
                     </Link>
                   </li>
-                </ul>
-              </div>
-              <div className="col-6">
-                <ul className="list-unstyled footer-links">
                   <li>
                     <Link
-                      to="/youtube-tools"
+                      to="/world-clock"
                       className="text-decoration-none text-secondary d-block mb-2"
                     >
-                      YT Downloader
+                      World Clock
                     </Link>
                   </li>
+                </ul>
+              </div>
+              <div>
+                <ul className="list-unstyled footer-links">
                   <li>
                     <Link
                       to="/url-shortener"
@@ -90,22 +86,30 @@ export default function Footer() {
                       Password Gen
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                      to="/currency-converter"
+                      className="text-decoration-none text-secondary d-block mb-2"
+                    >
+                      Currency Converter
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
 
-        <hr className="my-4 border-secondary" />
+        <div className="footer-divider" />
 
-        <div className="row align-items-center">
-          <div className="col-md-6 text-center text-md-start">
-            <p className="mb-0 text-secondary">
+        <div className="footer-bottom">
+          <div>
+            <p>
               &copy; {new Date().getFullYear()} ToolsGarage - All rights
               Reserved.
             </p>
           </div>
-          <div className="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <div className="footer-meta-links">
             <Link
               to="/contributors"
               className="text-secondary text-decoration-none me-3 small"
@@ -121,6 +125,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }

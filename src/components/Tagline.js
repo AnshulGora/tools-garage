@@ -19,10 +19,11 @@ export default function Tagline() {
       <div className="text-center taglinebtns">
         <a
           href="https://github.com/AnshulGora/tools-garage"
-          target="blank"
+          target="_blank"
+          rel="noreferrer"
           className="taglinebtn1"
         >
-          <i class="fa-brands fa-github"></i> Visit Repository
+          <i className="fa-brands fa-github" /> Visit Repository
         </a>
 
         <RouteLink to="/signup" className="taglinebtn2">
@@ -31,10 +32,15 @@ export default function Tagline() {
       </div>
 
       <p className="text-center checkpoints">
-        <i class="fa-solid fa-check"></i> Free forever for core features &nbsp;
-        &nbsp;
-        <i class="fa-solid fa-check"></i> More tools than any other platform
+        <i className="fa-solid fa-check" /> Free forever for core features
+        &nbsp; &nbsp;
+        <i className="fa-solid fa-check" /> More tools than any other platform
       </p>
+
+      <a href="#tools" className="tagline-scroll-link">
+        Explore tools{" "}
+        <i className="fa-solid fa-arrow-down" aria-hidden="true" />
+      </a>
     </div>
   );
 }
