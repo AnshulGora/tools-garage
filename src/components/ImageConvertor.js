@@ -4,32 +4,47 @@ const imageFormats = {
   jpg: { label: "JPG", mimeType: "image/jpeg", extension: "jpg" },
   png: { label: "PNG", mimeType: "image/png", extension: "png" },
   webp: { label: "WebP", mimeType: "image/webp", extension: "webp" },
+  avif: { label: "AVIF", mimeType: "image/avif", extension: "avif" },
 };
 
 const ImageConverter = () => {
   const [imageSrc, setImageSrc] = useState(null);
   const [imageFile, setImageFile] = useState(null);
   const [selectedFormat, setSelectedFormat] = useState("jpg");
+  const [quality, setQuality] = useState(90);
+  const [conversionError, setConversionError] = useState("");
 
   const handleInputChange = (e) => {
     const file = e.target.files[0];
     if (!file) return;
 
     setImageFile(file);
+    setConversionError("");
     convertImage(file, selectedFormat);
   };
 
   const handleFormatChange = (e) => {
     const format = e.target.value;
     setSelectedFormat(format);
+    setConversionError("");
 
     if (imageFile) {
       convertImage(imageFile, format);
     }
   };
 
-  const convertImage = (file, formatKey) => {
+  const handleQualityChange = (e) => {
+    const nextQuality = Number(e.target.value);
+    setQuality(nextQuality);
+
+    if (imageFile && selectedFormat !== "png") {
+      convertImage(imageFile, selectedFormat, nextQuality);
+    }
+  };
+
+  const convertImage = (file, formatKey, selectedQuality = quality) => {
     const format = imageFormats[formatKey];
+    setImageSrc(null);
     const reader = new FileReader();
     reader.onload = (event) => {
       const img = new Image();
@@ -38,10 +53,19 @@ const ImageConverter = () => {
         canvas.width = img.width;
         canvas.height = img.height;
         const ctx = canvas.getContext("2d");
+        if (format.mimeType === "image/jpeg") {
+          ctx.fillStyle = "#ffffff";
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+        }
         ctx.drawImage(img, 0, 0);
         canvas.toBlob(
           (blob) => {
-            if (!blob) return;
+            if (!blob) {
+              setConversionError(
+                `${format.label} conversion is not supported by this browser.`,
+              );
+              return;
+            }
 
             const convertedFile = new File(
               [blob],
@@ -57,11 +81,13 @@ const ImageConverter = () => {
             });
           },
           format.mimeType,
-          1,
+          selectedQuality / 100,
         );
       };
+      img.onerror = () => setConversionError("Unable to read this image.");
       img.src = event.target.result;
     };
+    reader.onerror = () => setConversionError("Unable to read this image.");
     reader.readAsDataURL(file);
   };
 
@@ -80,8 +106,8 @@ const ImageConverter = () => {
         <h5 className="card-head my-2">Image Converter</h5>
 
         <h5 className="mb-4">
-          Convert any image file to JPG, PNG, or WebP format. <br />
-          Click the button below to download the converted image.
+          Convert images to JPG, PNG, WebP, or AVIF format. <br />
+          Choose a format and download the converted image.
         </h5>
       </div>
 
@@ -115,8 +141,30 @@ const ImageConverter = () => {
         </select>
       </div>
 
+      <div className="mb-3">
+        <label htmlFor="imageQuality" className="form-label fw-bold">
+          Quality: {quality}%
+        </label>
+        <input
+          type="range"
+          id="imageQuality"
+          min="10"
+          max="100"
+          step="5"
+          value={quality}
+          onChange={handleQualityChange}
+          disabled={selectedFormat === "png"}
+          className="form-range"
+        />
+      </div>
+
       <div className="image-drop-area">
         <h3>Drop here or click above to select an image</h3>
+        {conversionError && (
+          <p className="text-danger" role="alert">
+            {conversionError}
+          </p>
+        )}
         {imageSrc && (
           <img
             src={imageSrc}

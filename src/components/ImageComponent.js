@@ -31,8 +31,9 @@ const ImageCompressor = () => {
   const [height, setHeight] = useState("");
   const [dimensionUnit, setDimensionUnit] = useState("px");
   const [keepRatio, setKeepRatio] = useState(true);
-  const [maxSizeKB, setMaxSizeKB] = useState(50); // Default maximum size
+  const [maxSizeKB, setMaxSizeKB] = useState("50"); // Default maximum size
   const [loading, setLoading] = useState(false); // Loading state
+  const [compressionError, setCompressionError] = useState("");
 
   const handleImageChange = async (e) => {
     const imageFile = e.target.files[0];
@@ -59,6 +60,7 @@ const ImageCompressor = () => {
 
   const compressImage = async (file, requestedWidth, requestedHeight, unit) => {
     setLoading(true);
+    setCompressionError("");
 
     try {
       const pixelWidth = toPixels(requestedWidth, unit);
@@ -90,18 +92,26 @@ const ImageCompressor = () => {
       }
 
       const options = {
-        maxSizeMB: maxSizeKB / 1024,
-        maxWidthOrHeight: Math.max(pixelWidth, pixelHeight),
+        maxSizeMB: Number(maxSizeKB) / 1024,
+        maxIteration: 50,
         useWebWorker: true,
       };
 
       const compressedFile = await imageCompression(fileToCompress, options);
+
+      if (compressedFile.size > Number(maxSizeKB) * 1024) {
+        throw new Error(
+          `This image cannot be compressed below ${maxSizeKB} KB with the selected dimensions.`,
+        );
+      }
+
       setCompressedImage(URL.createObjectURL(compressedFile));
       setCompressedFileName(
         `compressed_krdiya.${getFileExtension(compressedFile.type)}`,
       );
     } catch (error) {
       console.error("Image compression error:", error);
+      setCompressionError(error.message || "Unable to compress this image.");
     } finally {
       setLoading(false); // Set loading state to false when compression is done
     }
@@ -166,12 +176,11 @@ const ImageCompressor = () => {
   };
 
   const handleMaxSizeChange = (e) => {
-    const maxSize = parseFloat(e.target.value);
-    setMaxSizeKB(maxSize);
+    setMaxSizeKB(e.target.value);
   };
 
   const handleProcess = () => {
-    if (imageFile && width && height && maxSizeKB > 0) {
+    if (imageFile && width && height && Number(maxSizeKB) > 0) {
       compressImage(imageFile, width, height, dimensionUnit);
     }
   };
@@ -280,7 +289,13 @@ const ImageCompressor = () => {
           <button
             type="button"
             onClick={handleProcess}
-            disabled={!imageFile || loading || !maxSizeKB || !width || !height}
+            disabled={
+              !imageFile ||
+              loading ||
+              Number(maxSizeKB) <= 0 ||
+              !width ||
+              !height
+            }
             className="download-btn"
           >
             {loading ? "Processing..." : "Process Image"}
@@ -288,6 +303,11 @@ const ImageCompressor = () => {
         </div>
         <div className="row">
           {loading && <div className="text-center">Compressing image...</div>}{" "}
+          {compressionError && (
+            <div className="text-center text-danger" role="alert">
+              {compressionError}
+            </div>
+          )}
           {originalImage && (
             <>
               <div className="col-md-6">

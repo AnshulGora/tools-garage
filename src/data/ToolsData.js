@@ -2,37 +2,37 @@ const ToolsData = [
   {
     id: "1",
     title: "Image Compressor",
-    desc: "This tool allows you to compress the image and reduce the size as per your requirements.",
+    desc: "Compress images and reduce their file size to your preferred limit.",
     link: "image-tools",
   },
   {
     id: "2",
     title: "Image Converter",
-    desc: "This tool allows you to convert any type of Images to the jpg format.",
+    desc: "Convert images to JPG, PNG, or WebP format.",
     link: "image-converter",
   },
   {
     id: "3",
     title: "QR Code Generator",
-    desc: "This tool allows you to create a QR code for your website or any text you want to encode.",
+    desc: "Create QR codes for websites, text, and other content.",
     link: "qr-generator",
   },
   {
     id: "4",
     title: "Password Generator",
-    desc: "This tool allows you to generate strong passwords with custom length and include symbols and numbers.",
+    desc: "Generate secure passwords with a custom length, numbers, and symbols.",
     link: "password-generator",
   },
   {
     id: "5",
-    title: "URL Shortner",
-    desc: "This tool allows you to shorten your long URLs and share them easily with others. Allows to Copy the URL.",
+    title: "URL Shortener",
+    desc: "Shorten long URLs and copy the results for easy sharing.",
     link: "url-shortener",
   },
   {
     id: "6",
     title: "PDF Compressor",
-    desc: "This tool allows you to compress and reduce the size of the pdf.",
+    desc: "Reduce the file size of PDF documents.",
     link: "pdf-compressor",
   },
   {
@@ -44,7 +44,7 @@ const ToolsData = [
   {
     id: "8",
     title: "Currency Converter",
-    desc: "Convert currencies using the latest available exchange rates.",
+    desc: "Convert between currencies using current exchange rates.",
     link: "currency-converter",
   },
 ];

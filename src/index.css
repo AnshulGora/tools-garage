@@ -940,6 +940,54 @@ input {
   margin-bottom: 2rem;
 }
 
+.worldclock-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 1rem;
+}
+
+.clock-fullscreen {
+  min-height: 42px;
+  padding: 0.65rem 1rem;
+  border: 1px solid rgba(0, 153, 255, 0.45);
+  border-radius: 8px;
+  background-color: transparent;
+  color: var(--color-theme);
+  font-weight: 600;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+.clock-fullscreen:hover,
+.clock-fullscreen:focus-visible {
+  background-color: var(--color-theme);
+  color: var(--color-background);
+}
+
+.worldclock-feature:fullscreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 8vw;
+  border: 0;
+  border-radius: 0;
+  background-color: var(--color-background);
+  text-align: center;
+}
+
+.worldclock-feature:fullscreen::backdrop {
+  background-color: var(--color-background);
+}
+
+.worldclock-feature:fullscreen .worldclock-controls {
+  align-self: center;
+  width: min(520px, 100%);
+  text-align: left;
+}
+
 .worldclock-feature label,
 .currency-panel label {
   display: block;
@@ -1064,6 +1112,10 @@ input {
   .currency-panel,
   .worldclock-feature {
     padding: 1.25rem;
+  }
+
+  .worldclock-controls {
+    grid-template-columns: 1fr;
   }
 }
 

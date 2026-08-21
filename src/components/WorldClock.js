@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const cities = [
   { city: "New York", zone: "America/New_York" },
@@ -47,11 +47,32 @@ const TimeDisplay = ({ date, timeZone }) => {
 const WorldClock = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [selectedZone, setSelectedZone] = useState("Asia/Kolkata");
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const featureRef = useRef(null);
 
   useEffect(() => {
     const timer = window.setInterval(() => setCurrentTime(new Date()), 1000);
     return () => window.clearInterval(timer);
   }, []);
+
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(document.fullscreenElement === featureRef.current);
+    };
+
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+    return () =>
+      document.removeEventListener("fullscreenchange", handleFullscreenChange);
+  }, []);
+
+  const toggleFullscreen = async () => {
+    if (document.fullscreenElement) {
+      await document.exitFullscreen();
+      return;
+    }
+
+    await featureRef.current?.requestFullscreen();
+  };
 
   const selectedCity = cities.find(({ zone }) => zone === selectedZone);
 
@@ -63,26 +84,42 @@ const WorldClock = () => {
       </div>
 
       <div className="worldclock-layout">
-        <section className="worldclock-feature">
+        <section className="worldclock-feature" ref={featureRef}>
           <span className="live-indicator">Live now</span>
           <h2>{selectedCity.city}</h2>
           <div className="worldclock-time">
             <TimeDisplay date={currentTime} timeZone={selectedZone} />
           </div>
           <p>{formatDate(currentTime, selectedZone)}</p>
-          <label htmlFor="clockZone">Choose a city</label>
-          <select
-            id="clockZone"
-            value={selectedZone}
-            onChange={(event) => setSelectedZone(event.target.value)}
-            className="form-select"
-          >
-            {cities.map(({ city, zone }) => (
-              <option key={zone} value={zone}>
-                {city}
-              </option>
-            ))}
-          </select>
+          <div className="worldclock-controls">
+            <div>
+              <label htmlFor="clockZone">Choose a city</label>
+              <select
+                id="clockZone"
+                value={selectedZone}
+                onChange={(event) => setSelectedZone(event.target.value)}
+                className="form-select"
+              >
+                {cities.map(({ city, zone }) => (
+                  <option key={zone} value={zone}>
+                    {city}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <button
+              type="button"
+              className="clock-fullscreen"
+              onClick={toggleFullscreen}
+              aria-label={
+                isFullscreen
+                  ? "Exit fullscreen clock"
+                  : "Use clock as screensaver"
+              }
+            >
+              {isFullscreen ? "Exit fullscreen" : "Fullscreen clock"}
+            </button>
+          </div>
         </section>
 
         <section className="worldclock-list" aria-label="City times">
